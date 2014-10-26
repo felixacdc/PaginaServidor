@@ -2,6 +2,13 @@
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
+#erEmaillb{
+  display: none;
+}
+
+#erEmaili{
+  display: none;
+}
 
 #mod{
   right: 1px;
