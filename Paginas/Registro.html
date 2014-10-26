@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registro</title>
+	<link rel="icon" href="../img/logo.ico">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.css">
+    <link href="../css/Registro.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, inicial-scale=1.0">
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="site-wrapper">
+      <div class="site-wrapper-inner">
+
+      			<!--Menu-->
+		      <div class="navbar-wrapper">
+			      <div class="container">
+
+			        <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
+			        	<div class="container">
+					 		<div class="navbar-header">
+				              <a class="navbar-brand" href="../index.html">Productos Artesanales del Occidente</a>
+				            </div>
+				            <div id="navbar" class="navbar-collapse collapse">
+				              <ul class="nav navbar-nav pull-right">
+				                <li><a href="../index.html">Inicio</a></li>
+				                <li class="active"><a href="Registro.html">Registro</a></li>
+				              </ul>
+				            </div>
+				 		</div>
+				 	</nav>
+
+			      </div>
+		      </div>
+		      <!--Contenido Formulario-->
+				
+				<div class="container">
+					<div class="row">
+				 		<div class="col-md-12">&nbsp;</div>
+				 		<div class="col-md-12">&nbsp;</div>
+				 		<div class="col-md-12">&nbsp;</div>
+				 	</div>
+
+				 	<div class="row">
+				 		<div class="col-md-3"></div>
+				 		<div class="col-md-6">
+				 			<div class="page-header">
+				 				<h1 class="titlepage">Registro</h1>
+				 			</div>
+				 		</div>
+				 		<div class="col-md-3"></div>
+				 	</div>
+
+					<!--Formulario de registro-->
+				      <div class="row">
+					      	<div class="col-md-4"></div>
+
+					      	<div class="col-md-4">
+					      		<form action="" class="form-horizontal">
+
+					      			<!--input nombre-->
+					      			<div class="form-group has-error has-feedback">
+						 				<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+						 				<div class="input-group">
+							 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+							 				<input class="form-control" id="inputError2" type="text" placeholder="Nombre">
+						 				</div>
+							 			<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 				</div>
+
+					 				<!--input telefono-->
+									<div class="form-group  has-error has-feedback">
+										<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+						 				<div class="input-group">
+							 				<span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
+							 				<input class="form-control" type="text" placeholder="Telefono">
+						 				</div>
+						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 				</div>
+
+					 				<!--input Email-->
+									<div class="form-group  has-error has-feedback">
+										<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+						 				<div class="input-group">
+							 				<span class="input-group-addon"><i class="fa fa-at"></i></span>
+							 				<input class="form-control" type="text" placeholder="Email">
+						 				</div>
+						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 				</div>
+
+					 				<!--input Edad-->
+					 				<div class="form-group has-error has-feedback">
+					 					<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+					 					<div class="input-group">
+						 					<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+						 					<input type="text" class="form-control" placeholder="Edad">
+					 					</div>
+					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 				</div>
+
+					 				<!--input ??-->
+					 				<div class="form-group has-error has-feedback">
+					 					<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>					 				
+					 					<div class="input-group">
+						 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+						 					<input type="date" class="form-control" title="Ingrese Su Fecha De Nacimiento">
+					 					</div>
+					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 				</div>
+
+					 				<!--input sexo-->
+					 				<div class="form-group has-error has-feedback">
+					 					<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+					 					<div class="input-group">
+						 					<span class="input-group-addon"><i class="fa fa-female"></i><i class="fa fa-child"></i></span>
+						 					<SELECT NAME="cboplan" class="form-control" SIZE=1 id="cboplan" placeholder="Sexo"> 
+											<option value="">------</option>
+											<OPTION VALUE="Masculino">Masculino</OPTION>
+											<OPTION VALUE="Femenino">Femenino</OPTION>
+											<OPTION VALUE="Otro">Otro</OPTION>
+											</SELECT>
+					 					</div>
+					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 				</div>
+
+					 				<!--input submit-->
+					 				<div class="form-group">
+									      <button type="submit" class="btn btn-success pull-left">Registrar</button>
+									</div>
+				 				</form>
+					      	</div>
+							
+							<!--Espacio Horizontal-->
+					      	<div class="col-md-4"></div>
+
+				      	</div>
+
+				      	<!--Espacio vertical-->
+				      	<div class="row">
+				 			<div class="col-md-12">&nbsp;</div>
+				 		</div>
+
+
+			    </div>
+
+   
+		</div>
+	</div>
+
+	<script>
+		$().ready(function(){
+			$("input").tooltip({
+				placement: "right"
+			});
+		});
+	</script>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">&nbsp;</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<img class="img-rounded" src="../img/logo.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+					<h4>Productos Artesanales del Occidente</h4>
+			        <p>Telefono: 77713907</p>
+			        <p>Email: ArtesanosOcci@ONG.com</p>
+			        <p>Fax: 333-455</p>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
