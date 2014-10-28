@@ -2,13 +2,50 @@
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-#ErrorNomlbl{/*Id para ocultar label de Email*/
+#ErrorNomlbl{/*Id para ocultar label de nombre*/
   display: none;
 }
 
-#ErrorNomico{/*Id Para ocultar el icono X de Email*/
+#ErrorNomico{/*Id Para ocultar el icono X de nombre*/
   display: none;
 }
+
+#ErrorTellbl{/*Id para ocultar label de telefono*/
+  display: none;
+}
+
+#ErrorTelico{/*Id Para ocultar el icono X de telefono*/
+  display: none;
+}
+
+#ErrorEmalbl{/*Id para ocultar label de Email*/
+  display: none;
+}
+
+#ErrorEmaico{/*Id Para ocultar el icono X de Email*/
+  display: none;
+}
+
+#ErrorEdalbl{/*Id para ocultar label de Edad*/
+  display: none;
+}
+
+#ErrorEdaico{/*Id Para ocultar el icono X de edad*/
+  display: none;
+}
+
+#ErrorFeclbl{/*Id para ocultar label de fecha*/
+  display: none;
+}
+
+#ErrorFecico{/*Id Para ocultar el icono X de fecha*/
+  display: none;
+}
+
+#ErrorSexlbl{/*Id para ocultar label de Sexo*/
+  display: none;
+}
+
 
 #mod{
   right: 1px;

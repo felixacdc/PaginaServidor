@@ -66,64 +66,64 @@
 
 					      			<!--Lo que te describo aqui lo tenes que hacer con todos los imput-->
 					      			<!--las clases has-error y has-feedback son las que tenes que quitar para que no te marque el imput de rojo-->
-					      			<div class="form-group has-error has-feedback" id="ErrorNomdiv">
+					      			<div class="form-group" id="ErrorNomdiv">
 						 				<label class="control-label control-label-input-group" id="ErrorNomlbl" for="inputError2">Error Al Ingresar Datos</label><!--tenes que ocultarla con css y aparecerla cuando haya error-->
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							 				<input class="form-control" id="inputError2" type="text" placeholder="Nombre" id="txtNombre">
+							 				<input class="form-control" type="text" placeholder="Nombre" id="txtNombre">
 						 				</div>
 							 			<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"  id="ErrorNomico"></label><!--esta es el icono de X que aparece en los imput tambien la tenes que ocultar y aparecer cuando haya error-->
 					 				</div>
 
 					 				<!--input telefono-->
-									<div class="form-group  has-error has-feedback">
-										<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+									<div class="form-group" id="ErrorTeldiv">
+										<label class="control-label control-label-input-group" id="ErrorTellbl" for="inputError2">Error Al Ingresar Datos</label>
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
-							 				<input class="form-control" type="text" placeholder="Telefono">
+							 				<input class="form-control" type="text" placeholder="Telefono" id="txtTelefono">
 						 				</div>
-						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorTelico"></label>
 					 				</div>
 
 					 				<!--input Email-->
-									<div class="form-group has-error has-feedback" >
-										<label class="control-label control-label-input-group"  for="inputError2">Error Al Ingresar Datos</label>
+									<div class="form-group" id="ErrorEmadiv">
+										<label class="control-label control-label-input-group" id="ErrorEmalbl" for="inputError2">Error Al Ingresar Datos</label>
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-at"></i></span>
-							 				<input class="form-control" type="text" placeholder="Email">
+							 				<input class="form-control" type="text" placeholder="Email" id="txtEmail">
 						 				</div>
-						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorEmaico"></label>
 					 				</div>
 
 					 				<!--input Edad-->
-					 				<div class="form-group has-error has-feedback">
-					 					<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+					 				<div class="form-group" id="ErrorEdadiv">
+					 					<label class="control-label control-label-input-group" id="ErrorEdalbl" for="inputError2">Error Al Ingresar Datos</label>
 					 					<div class="input-group">
 						 					<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-						 					<input type="text" class="form-control" placeholder="Edad">
+						 					<input type="text" class="form-control" placeholder="Edad" id="txtEdad">
 					 					</div>
-					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorEdaico"></label>
 					 				</div>
 
-					 				<!--input ??-->
-					 				<div class="form-group has-error has-feedback">
-					 					<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>					 				
+					 				<!--input fecha-->
+					 				<div class="form-group" id="ErrorFecdiv">
+					 					<label class="control-label control-label-input-group" id="ErrorFeclbl" for="inputError2">Error Al Ingresar Datos</label>					 				
 					 					<div class="input-group">
 						 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-						 					<input type="date" class="form-control" title="Ingrese Su Fecha De Nacimiento">
+						 					<input type="date" class="form-control" title="Ingrese Su Fecha De Nacimiento" id="txtFecha">
 					 					</div>
-					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
+					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorFecico"></label>
 					 				</div>
 
 					 				<!--input sexo-->
 
 					 				<!--El input para el sexo no tiene icono de X asi dejalo-->
-					 				<div class="form-group has-error has-feedback">
-					 					<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label>
+					 				<div class="form-group" id="ErrorSexdiv">
+					 					<label class="control-label control-label-input-group" id="ErrorSexlbl" for="inputError2">Error Al Ingresar Datos</label>
 					 					<div class="input-group">
 						 					<span class="input-group-addon"><i class="fa fa-female"></i><i class="fa fa-child"></i></span>
-						 					<SELECT NAME="cboplan" class="form-control" SIZE=1 id="cboplan" placeholder="Sexo"> 
-											<option value="">------</option>
+						 					<SELECT NAME="cbosexo" class="form-control" SIZE=1 placeholder="Sexo" id="cboSexo"> 
+											<option value="0">------</option>
 											<OPTION VALUE="Masculino">Masculino</OPTION>
 											<OPTION VALUE="Femenino">Femenino</OPTION>
 											<OPTION VALUE="Otro">Otro</OPTION>
