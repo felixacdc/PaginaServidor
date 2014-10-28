@@ -2,11 +2,11 @@
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-#erEmaillb{
+#erEmaillb{/*Id para ocultar label de Email*/
   display: none;
 }
 
-#erEmaili{
+#erEmaili{/*Id Para ocultar el icono X de Email*/
   display: none;
 }
 
