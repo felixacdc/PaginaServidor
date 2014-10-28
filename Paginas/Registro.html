@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, inicial-scale=1.0">
 	<script src="../js/jquery-1.9.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="js/Registro.js"></script>
 </head>
 <body>
 	<div class="site-wrapper">
@@ -65,13 +66,13 @@
 
 					      			<!--Lo que te describo aqui lo tenes que hacer con todos los imput-->
 					      			<!--las clases has-error y has-feedback son las que tenes que quitar para que no te marque el imput de rojo-->
-					      			<div class="form-group has-error has-feedback">
-						 				<label class="control-label control-label-input-group" for="inputError2">Error Al Ingresar Datos</label><!--tenes que ocultarla con css y aparecerla cuando haya error-->
+					      			<div class="form-group has-error has-feedback" id="ErrorNomdiv">
+						 				<label class="control-label control-label-input-group" id="ErrorNomlbl" for="inputError2">Error Al Ingresar Datos</label><!--tenes que ocultarla con css y aparecerla cuando haya error-->
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							 				<input class="form-control" id="inputError2" type="text" placeholder="Nombre">
+							 				<input class="form-control" id="inputError2" type="text" placeholder="Nombre" id="txtNombre">
 						 				</div>
-							 			<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label><!--esta es el icono de X que aparece en los imput tambien la tenes que ocultar y aparecer cuando haya error-->
+							 			<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"  id="ErrorNomico"></label><!--esta es el icono de X que aparece en los imput tambien la tenes que ocultar y aparecer cuando haya error-->
 					 				</div>
 
 					 				<!--input telefono-->
@@ -86,12 +87,12 @@
 
 					 				<!--input Email-->
 									<div class="form-group has-error has-feedback" >
-										<label class="control-label control-label-input-group" id="erEmaillb" for="inputError2">Error Al Ingresar Datos</label>
+										<label class="control-label control-label-input-group"  for="inputError2">Error Al Ingresar Datos</label>
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-at"></i></span>
 							 				<input class="form-control" type="text" placeholder="Email">
 						 				</div>
-						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="erEmaili"></label>
+						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"></label>
 					 				</div>
 
 					 				<!--input Edad-->
@@ -132,7 +133,7 @@
 
 					 				<!--input submit-->
 					 				<div class="form-group">
-									      <button type="submit" class="btn btn-success pull-left">Registrar</button>
+									      <button type="button" class="btn btn-success pull-left" id="btnRegistrar">Registrar</button>
 									</div>
 				 				</form>
 					      	</div>
