@@ -11,6 +11,13 @@
 	<script src="js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
+	<div class="ContAlert">
+		<div class="alert alert-success">
+		 	<h4>Notificacion!!</h4>
+		 	Te has Registrado Correctamente
+		</div>
+	</div>
+	
 	<div class="site-wrapper">
       <div class="site-wrapper-inner">
 		      <div class="navbar-wrapper">

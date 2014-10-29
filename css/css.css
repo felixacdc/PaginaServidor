@@ -8,6 +8,17 @@ body{
   
 }
 
+.ContAlert{
+  width: 300px;
+  height: 100px;
+   position: absolute;
+   margin: 8px auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
   .site-wrapper{
     display: table;
     width: 100%;

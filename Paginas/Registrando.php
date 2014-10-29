@@ -7,6 +7,14 @@
 	$sex=$_POST["sexo"];
 	
 	include("Conexion.php");
-	echo "Bienvenido";
+	
+	$consulta="INSERT INTO registro(nombre,telefono,email,edad,fechanacimiento,sexo) VALUES ('$nom','$tel','$ema','$edad','$naci','$sex')";
+	$ejecutar_consulta=$conexion->query($consulta);
+	
+	if($ejecutar_consulta)
+	{
 
+		header("Location: ../index.php");
+
+	}
 ?>
