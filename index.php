@@ -9,14 +9,43 @@
 	<link rel="stylesheet" href="css/css.css">
     <link href="css/carousel.css" rel="stylesheet">
 	<script src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+	    function mensajeregistro(){
+			$("#alert").fadeIn(1000);
+		    $("#alert").delay(2000).fadeOut();
+		  }
+
+	</script>
+	<?php
+		if($_GET["reg"]==1)
+		{
+			echo "
+				<div class='ContAlert' id='alert'>
+					<div class='alert alert-success'>
+					 	<h4>Notificacion!!</h4>
+					 	Te has Registrado Correctamente
+					</div>
+				</div>";
+	?>
+	<script>
+		mensajeregistro();
+	</script>
+	<?php
+		}else{
+	?>
+		<style>
+			.carousel
+			{
+				margin-top: -40px;
+			}
+		</style>
+	<?php
+		}
+	?>
 </head>
 <body>
-	<div class="ContAlert">
-		<div class="alert alert-success">
-		 	<h4>Notificacion!!</h4>
-		 	Te has Registrado Correctamente
-		</div>
-	</div>
+
+
 	
 	<div class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -26,11 +55,11 @@
 			        <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
 			        	<div class="container">
 					 		<div class="navbar-header">
-				              <a class="navbar-brand" href="index.html">Productos Artesanales del Occidente</a>
+				              <a class="navbar-brand" href="index.php">Productos Artesanales del Occidente</a>
 				            </div>
 				            <div id="navbar" class="navbar-collapse collapse">
 				              <ul class="nav navbar-nav pull-right">
-				                <li class="active"><a href="index.html">Inicio</a></li>
+				                <li class="active"><a href="index.php">Inicio</a></li>
 				                <li><a href="Paginas/Registro.html">Registro</a></li>
 				              </ul>
 				            </div>

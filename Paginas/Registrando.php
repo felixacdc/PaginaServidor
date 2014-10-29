@@ -14,7 +14,7 @@
 	if($ejecutar_consulta)
 	{
 
-		header("Location: ../index.php");
+		header("Location: ../index.php?reg=1");
 
 	}
 ?>
