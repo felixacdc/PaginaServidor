@@ -12,6 +12,164 @@ function limpiarInput(){
 	edad=$("#txtEdad").val().trim();
 }
 
+function nombrevalidate(){
+
+	
+	$("#txtNombre").focusout(function(){
+		limpiarInput();	
+		if(nombre==""){
+			$( "#ErrorNomdiv" ).addClass("has-error has-feedback");
+			$('#ErrorNomlbl').text('El Nombre Es Requerido');
+			$("#ErrorNomlbl").fadeIn();
+			$('#ErrorNomico').fadeIn();	
+			$('#txtNombre').val(nombre);
+		}
+	});
+
+	$("#txtNombre").focus(function(){
+			setTimeout(function(){
+				$( "#ErrorNomdiv" ).removeClass("has-error has-feedback");
+			},600);
+			$("#ErrorNomlbl").fadeOut();
+			$('#ErrorNomico').fadeOut();
+	});
+
+}
+
+
+function telefonovalidate(){
+
+
+	$("#txtTelefono").focusout(function(){
+		limpiarInput();	
+		if(telefono==""){
+			$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
+			$('#ErrorTellbl').text('El Telefono Es Requerido');
+			$("#ErrorTellbl").fadeIn();
+			$('#ErrorTelico').fadeIn();	
+			$('#txtTelefono').val(telefono);	
+		}else if(isNaN(telefono))
+				{
+					$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
+					$('#ErrorTellbl').text('Solo Se Admiten Numeros En Este Campo');
+					$("#ErrorTellbl").fadeIn();
+					$('#ErrorTelico').fadeIn();	
+				}else if (telefono.length!=8)
+					{
+						$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
+						$('#ErrorTellbl').text('Tienes Que Ingresar 8 Digitos');
+						$("#ErrorTellbl").fadeIn();
+						$('#ErrorTelico').fadeIn();	
+					}
+	});
+
+	$("#txtTelefono").focus(function(){
+			setTimeout(function(){
+				$( "#ErrorTeldiv" ).removeClass("has-error has-feedback");
+			},600);
+			$("#ErrorTellbl").fadeOut();
+			$('#ErrorTelico').fadeOut();
+	});
+
+}
+
+function emailvalidate()
+{
+	$("#txtEmail").focusout(function(){
+		limpiarInput();
+		if(email==""){
+			$( "#ErrorEmadiv" ).addClass( "has-error has-feedback" );
+			$('#ErrorEmalbl').text('El Email Es Requerido');
+			$("#ErrorEmalbl").fadeIn();
+			$('#ErrorEmaico').fadeIn();	
+			$('#txtEmail').val(email);	
+		}else if( !emailReg.test(email))
+				{
+					$( "#ErrorEmadiv" ).addClass( "has-error has-feedback" );
+					$('#ErrorEmalbl').text('El Email Es Invalido');
+					$("#ErrorEmalbl").fadeIn();
+					$('#ErrorEmaico').fadeIn();		
+				}
+	});
+
+	$("#txtEmail").focus(function(){
+			setTimeout(function(){
+				$( "#ErrorEmadiv" ).removeClass("has-error has-feedback");
+			},600);
+			$("#ErrorEmalbl").fadeOut();
+			$('#ErrorEmaico').fadeOut();
+	});
+}
+
+function edadvalidate(){
+	$("#txtEdad").focusout(function(){
+		limpiarInput();
+		if(edad==""){
+			$( "#ErrorEdadiv" ).addClass( "has-error has-feedback" );
+			$('#ErrorEdalbl').text('La Edad Es Requerido');
+			$("#ErrorEdalbl").fadeIn();
+			$('#ErrorEdaico').fadeIn();
+			$('#txtEdad').val(edad);	
+		}else if (isNaN(edad))
+				{
+					$( "#ErrorEdadiv" ).addClass( "has-error has-feedback" );
+					$('#ErrorEdalbl').text('Solo Se Adminten Numeros En Este Campo');
+					$("#ErrorEdalbl").fadeIn();
+					$('#ErrorEdaico').fadeIn();	
+				}
+	});
+
+	$("#txtEdad").focus(function(){
+		setTimeout(function(){
+			$( "#ErrorEdadiv" ).removeClass("has-error has-feedback");
+		},600);
+		$("#ErrorEdalbl").fadeOut();
+		$('#ErrorEdaico').fadeOut();
+	});
+}
+
+function fechavalidate(){
+
+	$("#txtFecha").focusout(function(){
+		limpiarInput();
+		if($("#txtFecha").val()==""){
+			$( "#ErrorFecdiv" ).addClass( "has-error has-feedback" );
+			$('#ErrorFeclbl').text('La Fecha Nacimiento Es Requerido');
+			$("#ErrorFeclbl").fadeIn();
+			$('#ErrorFecico').fadeIn();
+		}
+	});
+
+	$("#txtFecha").focus(function(){
+		setTimeout(function(){
+			$( "#ErrorFecdiv" ).removeClass("has-error has-feedback");
+		},600);
+		$("#ErrorFeclbl").fadeOut();
+		$('#ErrorFecico').fadeOut();
+	});
+
+}
+
+function sexovalidate(){
+
+	$("#cboSexo").focusout(function(){
+		limpiarInput();
+		if($("#cboSexo").val()=="0"){
+			$( "#ErrorSexdiv" ).addClass( "has-error has-feedback" );
+			$('#ErrorSexlbl').text('La Sexo Es Requerido');
+			$("#ErrorSexlbl").fadeIn();
+			$('#ErrorSexico').fadeIn();
+		}
+	});
+
+	$("#cboSexo").focus(function(){
+		setTimeout(function(){
+			$( "#ErrorSexdiv" ).removeClass("has-error has-feedback");
+		},600);
+		$("#ErrorSexlbl").fadeOut();
+		$('#ErrorSexico').fadeOut();
+	});
+}
 
 $(document).ready(function(){
 		
@@ -19,106 +177,99 @@ $(document).ready(function(){
 		
 		$("#btnRegistrar").click(function(){
 			
-			limpiarInput();
+				limpiarInput();
 
-			if(nombre==""){
-				setTimeout(function(){
+				if(nombre==""){
+					
 					$( "#ErrorNomdiv" ).addClass("has-error has-feedback");
-				},200);
-				$('#ErrorNomlbl').text('El Nombre Es Requerido');
-				$("#ErrorNomlbl").fadeIn(1000);
-				$('#ErrorNomico').fadeIn(1000);	
-				$('#txtNombre').val(nombre);			
-				ejecutar=false;
-			}
+					$('#ErrorNomlbl').text('El Nombre Es Requerido');
+					$("#ErrorNomlbl").fadeIn();
+					$('#ErrorNomico').fadeIn();	
+					$('#txtNombre').val(nombre);			
+					ejecutar=false;
+				}
 
-			if(telefono==""){
-				setTimeout(function(){
+				if(telefono==""){
 					$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
-				},200);
-				$('#ErrorTellbl').text('El Telefono Es Requerido');
-				$("#ErrorTellbl").fadeIn(1000);
-				$('#ErrorTelico').fadeIn(1000);	
-				$('#txtTelefono').val(telefono);			
-				ejecutar=false;
-			}else if(isNaN(telefono))
-					{
-						setTimeout(function(){
-							$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
-						},200);
-						$('#ErrorTellbl').text('Solo Se Admiten Numeros En Este Campo');
-						$("#ErrorTellbl").fadeIn(1000);
-						$('#ErrorTelico').fadeIn(1000);	
-						ejecutar=false;
-					}else if (telefono.length!=8)
+					$('#ErrorTellbl').text('El Telefono Es Requerido');
+					$("#ErrorTellbl").fadeIn();
+					$('#ErrorTelico').fadeIn();	
+					$('#txtTelefono').val(telefono);			
+					ejecutar=false;
+				}else if(isNaN(telefono))
 						{
-							setTimeout(function(){
 							$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
-							},200);
-							$('#ErrorTellbl').text('Tienes Que Ingresar 8 Digitos');
-							$("#ErrorTellbl").fadeIn(1000);
-							$('#ErrorTelico').fadeIn(1000);	
+							$('#ErrorTellbl').text('Solo Se Admiten Numeros En Este Campo');
+							$("#ErrorTellbl").fadeIn();
+							$('#ErrorTelico').fadeIn();	
+							ejecutar=false;
+						}else if (telefono.length!=8)
+							{
+								$( "#ErrorTeldiv" ).addClass( "has-error has-feedback" );
+								$('#ErrorTellbl').text('Tienes Que Ingresar 8 Digitos');
+								$("#ErrorTellbl").fadeIn();
+								$('#ErrorTelico').fadeIn();	
+								ejecutar=false;
+							}
+
+				if(email==""){
+					$( "#ErrorEmadiv" ).addClass( "has-error has-feedback" );
+					$('#ErrorEmalbl').text('El Email Es Requerido');
+					$("#ErrorEmalbl").fadeIn();
+					$('#ErrorEmaico').fadeIn();	
+					$('#txtEmail').val(email);			
+					ejecutar=false;
+				}else if( !emailReg.test(email))
+						{
+							$( "#ErrorEmadiv" ).addClass( "has-error has-feedback" );
+							$('#ErrorEmalbl').text('El Email Es Invalido');
+							$("#ErrorEmalbl").fadeIn();
+							$('#ErrorEmaico').fadeIn();				
 							ejecutar=false;
 						}
 
-			if(email==""){
-				setTimeout(function(){
-					$( "#ErrorEmadiv" ).addClass( "has-error has-feedback" );
-				},200);
-				$('#ErrorEmalbl').text('El Email Es Requerido');
-				$("#ErrorEmalbl").fadeIn(1000);
-				$('#ErrorEmaico').fadeIn(1000);	
-				$('#txtEmail').val(email);			
-				ejecutar=false;
-			}else if( !emailReg.test(email))
-					{
-						setTimeout(function(){
-						$( "#ErrorEmadiv" ).addClass( "has-error has-feedback" );
-						},200);
-						$('#ErrorEmalbl').text('El Email Es Invalido');
-						$("#ErrorEmalbl").fadeIn(1000);
-						$('#ErrorEmaico').fadeIn(1000);				
-						ejecutar=false;
-					}
-
-			if(edad==""){
-				setTimeout(function(){
+				if(edad==""){
 					$( "#ErrorEdadiv" ).addClass( "has-error has-feedback" );
-				},200);
-				$('#ErrorEdalbl').text('La Edad Es Requerido');
-				$("#ErrorEdalbl").fadeIn(1000);
-				$('#ErrorEdaico').fadeIn(1000);
-				$('#txtEdad').val(edad);			
-				ejecutar=false;
-			}else if (isNaN(edad))
-					{
-						setTimeout(function(){
-						$( "#ErrorEdadiv" ).addClass( "has-error has-feedback" );
-						},200);
-						$('#ErrorEdalbl').text('Solo Se Adminten Numeros En Este Campo');
-						$("#ErrorEdalbl").fadeIn(1000);
-						$('#ErrorEdaico').fadeIn(1000);	
-					}
+					$('#ErrorEdalbl').text('La Edad Es Requerido');
+					$("#ErrorEdalbl").fadeIn();
+					$('#ErrorEdaico').fadeIn();
+					$('#txtEdad').val(edad);			
+					ejecutar=false;
+				}else if (isNaN(edad))
+						{
+							$( "#ErrorEdadiv" ).addClass( "has-error has-feedback" );
+							$('#ErrorEdalbl').text('Solo Se Adminten Numeros En Este Campo');
+							$("#ErrorEdalbl").fadeIn();
+							$('#ErrorEdaico').fadeIn();	
+						}
 
-			if($("#txtFecha").val()==""){
-				setTimeout(function(){
+				if($("#txtFecha").val()==""){
 					$( "#ErrorFecdiv" ).addClass( "has-error has-feedback" );
-				},200);
-				$('#ErrorFeclbl').text('La Fecha Nacimiento Es Requerido');
-				$("#ErrorFeclbl").fadeIn(1000);
-				$('#ErrorFecico').fadeIn(1000);				
-				ejecutar=false;
-			}
+					$('#ErrorFeclbl').text('La Fecha Nacimiento Es Requerido');
+					$("#ErrorFeclbl").fadeIn();
+					$('#ErrorFecico').fadeIn();				
+					ejecutar=false;
+				}
 
-			if($("#cboSexo").val()=="0"){
-				setTimeout(function(){
+				if($("#cboSexo").val()=="0"){
 					$( "#ErrorSexdiv" ).addClass( "has-error has-feedback" );
-				},200);
-				$('#ErrorSexlbl').text('La Sexo Es Requerido');
-				$("#ErrorSexlbl").fadeIn(1000);
-				$('#ErrorSexico').fadeIn(1000);				
-				ejecutar=false;
-			}
+					$('#ErrorSexlbl').text('La Sexo Es Requerido');
+					$("#ErrorSexlbl").fadeIn();
+					$('#ErrorSexico').fadeIn();				
+					ejecutar=false;
+				}
+
+				if(ejecutar)
+				{
+					document.Registro.submit();
+				}
 	
 		});
+
+		nombrevalidate();
+		telefonovalidate();
+		emailvalidate();
+		edadvalidate();
+		fechavalidate();
+		sexovalidate();
 });

@@ -60,7 +60,7 @@
 					      	<div class="col-md-4"></div>
 
 					      	<div class="col-md-4">
-					      		<form action="" class="form-horizontal">
+					      		<form action="Registrando.php" name="Registro" class="form-horizontal" method="post" enctype="multipart/form-data">
 
 					      			<!--input nombre-->
 
@@ -70,7 +70,7 @@
 						 				<label class="control-label control-label-input-group" id="ErrorNomlbl" for="inputError2">Error Al Ingresar Datos</label><!--tenes que ocultarla con css y aparecerla cuando haya error-->
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							 				<input class="form-control" type="text" placeholder="Nombre" id="txtNombre">
+							 				<input class="form-control" type="text" placeholder="Nombre" id="txtNombre" name="Nombre">
 						 				</div>
 							 			<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group"  id="ErrorNomico"></label><!--esta es el icono de X que aparece en los imput tambien la tenes que ocultar y aparecer cuando haya error-->
 					 				</div>
@@ -80,7 +80,7 @@
 										<label class="control-label control-label-input-group" id="ErrorTellbl" for="inputError2">Error Al Ingresar Datos</label>
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
-							 				<input class="form-control" type="text" placeholder="Telefono" id="txtTelefono">
+							 				<input class="form-control" type="text" placeholder="Telefono" id="txtTelefono" name="telefono">
 						 				</div>
 						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorTelico"></label>
 					 				</div>
@@ -90,7 +90,7 @@
 										<label class="control-label control-label-input-group" id="ErrorEmalbl" for="inputError2">Error Al Ingresar Datos</label>
 						 				<div class="input-group">
 							 				<span class="input-group-addon"><i class="fa fa-at"></i></span>
-							 				<input class="form-control" type="text" placeholder="Email" id="txtEmail">
+							 				<input class="form-control" type="text" placeholder="Email" id="txtEmail" name="email">
 						 				</div>
 						 				<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorEmaico"></label>
 					 				</div>
@@ -100,7 +100,7 @@
 					 					<label class="control-label control-label-input-group" id="ErrorEdalbl" for="inputError2">Error Al Ingresar Datos</label>
 					 					<div class="input-group">
 						 					<span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-						 					<input type="text" class="form-control" placeholder="Edad" id="txtEdad">
+						 					<input type="text" class="form-control" placeholder="Edad" id="txtEdad" name="edad">
 					 					</div>
 					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorEdaico"></label>
 					 				</div>
@@ -110,7 +110,7 @@
 					 					<label class="control-label control-label-input-group" id="ErrorFeclbl" for="inputError2">Error Al Ingresar Datos</label>					 				
 					 					<div class="input-group">
 						 					<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-						 					<input type="date" class="form-control" title="Ingrese Su Fecha De Nacimiento" id="txtFecha">
+						 					<input type="date" class="form-control" title="Ingrese Su Fecha De Nacimiento" id="txtFecha" name="nacimiento">
 					 					</div>
 					 					<label class="glyphicon glyphicon-remove form-control-feedback form-control-feedback-input-group" id="ErrorFecico"></label>
 					 				</div>
@@ -122,7 +122,7 @@
 					 					<label class="control-label control-label-input-group" id="ErrorSexlbl" for="inputError2">Error Al Ingresar Datos</label>
 					 					<div class="input-group">
 						 					<span class="input-group-addon"><i class="fa fa-female"></i><i class="fa fa-child"></i></span>
-						 					<SELECT NAME="cbosexo" class="form-control" SIZE=1 placeholder="Sexo" id="cboSexo"> 
+						 					<SELECT class="form-control" SIZE=1 placeholder="Sexo" id="cboSexo" name="sexo"> 
 											<option value="0">------</option>
 											<OPTION VALUE="Masculino">Masculino</OPTION>
 											<OPTION VALUE="Femenino">Femenino</OPTION>
