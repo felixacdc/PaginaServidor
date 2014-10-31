@@ -13,8 +13,9 @@
 	
 	if($ejecutar_consulta)
 	{
-
-		header("Location: ../index.php?reg=1");
+		session_start();
+		$_SESSION["reg"]=true;
+		header("Location: ../index.php");
 
 	}
 ?>

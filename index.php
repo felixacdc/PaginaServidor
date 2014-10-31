@@ -17,7 +17,9 @@
 
 	</script>
 	<?php
-		if($_GET["reg"]==1)
+		session_start();
+		error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+		if($_SESSION["reg"]==true)
 		{
 			echo "
 				<div class='ContAlert' id='alert'>
@@ -26,19 +28,12 @@
 					 	Te has Registrado Correctamente
 					</div>
 				</div>";
+			session_start();	
+			session_destroy();
 	?>
 	<script>
 		mensajeregistro();
 	</script>
-	<?php
-		}else{
-	?>
-		<style>
-			.carousel
-			{
-				margin-top: -40px;
-			}
-		</style>
 	<?php
 		}
 	?>
@@ -152,7 +147,7 @@
 	        <div class="col-lg-4">
 	          <img class="img-circle" src="img/ale.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 	          <h2>Alejandro Diaz</h2>
-	          <p>Numero De Carnet: 2790-12-5665</p>
+	          <p>Numero De Carnet: 2790-12-2506</p>
 	          <p>Carrera: Ingenieria En Sistemas</p>
 	          <p>Semestre: Sexto</p>
 	        </div>
